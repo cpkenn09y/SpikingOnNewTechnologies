@@ -25,7 +25,7 @@
 
     <!-- <div id="foo" data-0="background-color:rgb(0,0,255);" data-500="background-color:rgb(255,0,0);">WOOOT</div> -->
 
-    <div class="poop" data-top="background-color:rgba(255,0,0,1); left:100%" data-center-center="background-color:rgba(255,0,0,0.5); left:0%">
+    <div class="poop" data-top="background-color:rgba(255,0,0,1); left:0%" data-bottom-center="background-color:rgba(255,0,0,0.5); left:100%">
       <!-- Slides from right to left and opacity gets half lighter -->
       <h1>ZOMG IS THAT POOP?!?</h1>
       <h1>YUP PROBABLY POOP</h1>
@@ -36,12 +36,31 @@
       <h1>POOP</h1>
     </div>
 
+    <div class="picture">
+
+    </div>
+
     <div class="sports">
       <h1>Basketball</h1>
       <h1>Baseball</h1>
       <h1>Soccer</h1>
       <h1>Hockey</h1>
       <h1>Football</h1>
+      <h1>Football</h1>
+      <h1>Football</h1>
+      <h1>Football</h1>
+      <h1>Football</h1>
+    </div>
+
+    <div class="animals">
+      <h1>Rabbit</h1>
+      <h1>Sheep</h1>
+      <h1>Cow</h1>
+      <h1>Sheep</h1>
+      <h1>Deer</h1>
+      <h1>Sheep</h1>
+      <h1>Sheep</h1>
+      <h1>Sheep</h1>
     </div>
 
     <!-- As soon as the viewport reaches the div#foo, it starts off as blue and then once we are 500 pixels from the start of the div, then the text is red -->
@@ -50,7 +69,11 @@
 
   <script type="text/javascript" src="skrollr.min.js"></script>
   <script type="text/javascript">
-    var s = skrollr.init();
+    var s = skrollr.init({
+      render: function(data) {
+        console.log(data.curTop)
+      }
+    });
   </script>
 
   <style>
@@ -61,7 +84,46 @@
     h1 {
       padding: 50px;
     }
+
+    div {
+      height: 1000px;
+      width: auto;
+    }
+
+    .about {
+      background-color: aquamarine;
+    }
+
+    .picture {
+      background-image: url('http://arindambose.com/blog/wp-content/uploads/2014/02/google-e1371723033210.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      background-size: cover;;
+    }
+
+    .dance {
+      background-color: green;
+    }
+
+    .sports {
+
+    }
+
+    .animals {
+      background-color: purple;
+    }
+
   </style>
+
+  <!-- A Transparent Black, Curtain Effect -->
+
+  <!-- Move a background image to the left/right -->
+
+  <!-- Roll Up a Background Image -->
+
+  <!-- Fade a Screen to Black -->
 
 </body>
 
