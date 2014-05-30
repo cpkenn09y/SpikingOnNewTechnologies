@@ -25,7 +25,8 @@
 
     <!-- <div id="foo" data-0="background-color:rgb(0,0,255);" data-500="background-color:rgb(255,0,0);">WOOOT</div> -->
 
-    <div class="poop" data-top="background-color:rgba(255,0,0,1); left:100%" data--300-top="background-color:rgba(255,0,0,0.5); left:0%">
+    <div class="poop" data-top="background-color:rgba(255,0,0,1); left:100%" data-center-center="background-color:rgba(255,0,0,0.5); left:0%">
+      <!-- Slides from right to left and opacity gets half lighter -->
       <h1>ZOMG IS THAT POOP?!?</h1>
       <h1>YUP PROBABLY POOP</h1>
       <h1>SUPER MAN IS HERE!!!</h1>
@@ -33,6 +34,14 @@
       <h1>POOP</h1>
       <h1>POOP</h1>
       <h1>POOP</h1>
+    </div>
+
+    <div class="sports">
+      <h1>Basketball</h1>
+      <h1>Baseball</h1>
+      <h1>Soccer</h1>
+      <h1>Hockey</h1>
+      <h1>Football</h1>
     </div>
 
     <!-- As soon as the viewport reaches the div#foo, it starts off as blue and then once we are 500 pixels from the start of the div, then the text is red -->
@@ -47,6 +56,10 @@
   <style>
     .poop {
       position: relative;
+    }
+
+    h1 {
+      padding: 50px;
     }
   </style>
 
